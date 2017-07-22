@@ -1,0 +1,239 @@
+body {
+	font-family: "Open Sans", sans-serif
+}
+hr {
+	margin: 30px 0;
+}
+h1 {
+	color: #ccc;
+	font-weight: 300;
+}
+
+figure {
+	margin: auto;
+}
+.content {
+	position: relative;
+	z-index: 2;
+	background: #fff;
+}
+.content article{
+	padding: 100px;
+	max-width: 640px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.content img {
+	width: 100%;
+}
+
+/*paralax*/
+
+header.bird-box {
+	position: relative;
+	height: 600px;
+	background-image: url(../images/bird-bg.jpg);
+	background-size: auto 600px;
+	background-position: top center;
+	background-attachment: fixed;
+	overflow: hidden;
+	z-index: 3;
+}
+
+header .logo {
+	height: 100px;
+	width: 100%;
+	background-image: url(../images/black-bird-logo.svg);
+	background-position: center;
+	background-repeat: no-repeat;
+	position: absolute;
+	top: calc(50% - 50px);
+}
+
+header .fore-bird {
+	width: 960px;
+	height: 733px;
+	background: url(../images/fore-bird.png);
+	background-repeat: no-repeat;
+	background-position: right bottom;
+	/*background-color: pink;*/
+	position: absolute;
+	left: calc(50% - 480px); 
+	top: 380px;
+}
+
+header .back-bird {
+	width: 960px;
+	height: 298px;
+	background-image: url(../images/back-bird.png);
+	/*background-color: pink;*/
+	background-repeat: no-repeat;
+	background-position: left center;
+	position: absolute;
+	left: calc(50% - 480px);
+
+}
+
+/*.row:after {
+	content: '';
+	display: block;
+	float: left
+}*/
+.row {
+	display: flex;
+	justify-content: space-between;
+}
+
+.row img {
+	width: 100%;
+}
+
+.row .collumns {
+	width: 30%;
+}
+
+
+/*model grid*/
+.clothes-pics {
+	margin-bottom: 100px;
+}
+
+.clothes-pics figure {
+	margin-bottom: 20px;
+	position: relative;
+	opacity: 0;
+	overflow: hidden;
+	cursor: pointer;
+}
+.clothes-pics figure:hover figcaption{
+	left: 0;
+}
+.clothes-pics figure figcaption {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background-color: black;
+	color: #fff;
+	padding: 2px 8px;
+	font-size: 11px;
+	left: -100%;
+	transition: all 0.5s ease-in-out;
+}
+.clothes-pics img {
+	display: block;
+	transform: scale(1);
+	transition: all 0.5s ease-in-out;
+}
+
+.clothes-pics figure:hover img {
+	transform: scale(1.2);
+}
+.clothes-pics figure.is-showing {
+	animation: fade 0.3s ease-in-out forwards;
+}
+
+@keyframes fade {
+	0% { opacity: 0; transform: translateX(20px);}
+	100% { opacity: 1; transform: translateX(0px);}
+}
+
+/*large window*/
+
+
+.large-window {
+	height: 640px;
+	background-image: url(../images/model2.jpg);
+	background-position: center 0px;
+	background-attachment: fixed;
+	background-repeat: repeat-y; 
+	margin-top: 100px;
+	margin-bottom: 100px;
+	border-radius: 50%;
+	position: relative;
+}
+
+.large-window .window-tint {
+	background-color: rgba(0,0,0,0.5);
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.large-window .window-tint .promo-text {
+	color: #fff;
+	font-weight: 100;
+	font-size: 50px;
+	line-height: 1.2;
+}
+
+.large-window .window-tint .promo-text strong {
+	display: block;
+	font-size: 30px;
+}
+
+.large-window .window-tint .promo-text strong span {
+	font-size: 18px;
+	font-weight: 300; 
+	font-style: italic;
+	color: #999;
+}
+
+
+.large-window .window-tint .promo-text .window-cta {
+	font-size: 20px;
+	text-decoration: none;
+	color: #fff;
+	border: 1px solid #fff;
+	padding: 10px 20px;
+	transition: all 0.3s ease-in-out;
+}
+
+.large-window .window-tint .promo-text .window-cta:hover {
+	background: #fff;
+	color: #000;
+}
+
+.post {
+	margin: 15px;
+	border: 1px solid #000;
+	padding: 20px 20px;
+	background: #fff;
+	position: relative;
+}
+
+.button {
+	text-decoration: none;
+	color: black;
+	padding: 10px 10px;
+	border: 1px solid #000;
+	font-size: 18px;
+	display: inline-block;
+}
+
+.post-1 {
+	transform: translate(100px, 20px);
+}
+
+.post-2 {
+	z-index: 2;
+}
+
+.post-3 {
+	transform: translate(-100px, 20px);
+}
+
+footer {
+	height: 400px;
+	background: black;
+	position: fixed;
+	bottom: 0;
+}
+
+
